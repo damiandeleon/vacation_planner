@@ -21,13 +21,13 @@
 2. [Sygic Travel API](http://docs.sygictravelapi.com/1.2/): to give activities for location, help assist in booking transportation, etc.
 
 # Tasks
-HTML:
+## HTML:
 1. initial
 2. beachTheme and mountainTheme (very similar)
-JS:
+## JS:
 1. fetch the APIs
 2. dynamic appending
 3. local storage
-CSS:
+## CSS:
 1. make it pretty! low emphasis in the beginning
 
