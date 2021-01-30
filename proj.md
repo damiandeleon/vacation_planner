@@ -9,7 +9,11 @@
 
 # Wire Frame
 
-1. ()
+<img width="1081" alt="SH1" src="https://user-images.githubusercontent.com/73486962/106366128-6aa03980-62ff-11eb-90b6-5f404cd4c415.png">
+<img width="1080" alt="SH2" src="https://user-images.githubusercontent.com/73486962/106366129-6b38d000-62ff-11eb-8f58-0721f77468fc.png">
+<img width="1079" alt="SH3" src="https://user-images.githubusercontent.com/73486962/106366131-6c69fd00-62ff-11eb-9156-8742d84ddc7f.png">
+<img width="1077" alt="SH4" src="https://user-images.githubusercontent.com/73486962/106366132-6d9b2a00-62ff-11eb-963f-d05d326c70ed.png">
+<img width="1074" alt="SH5" src="https://user-images.githubusercontent.com/73486962/106366133-6d9b2a00-62ff-11eb-9147-d5d352401257.png">
 
 # APIs to use
 1. [OpenWeather API](https://openweathermap.org/api): to display forecast for next 7 days once user has chosen theme and location. Will be visible under the to do list
