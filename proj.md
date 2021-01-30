@@ -12,9 +12,9 @@
 1. 
 
 # APIs to use
-![OpenWeather API](https://openweathermap.org/api): to display forecast for next 7 days once user has chosen theme and location. Will be visible under the to do list
+1. [OpenWeather API](https://openweathermap.org/api): to display forecast for next 7 days once user has chosen theme and location. Will be visible under the to do list
 
-![Sygic Travel API](http://docs.sygictravelapi.com/1.2/): to give activities for location, help assist in booking transportation, etc.
+2. [Sygic Travel API](http://docs.sygictravelapi.com/1.2/): to give activities for location, help assist in booking transportation, etc.
 
 # Tasks
 1. HTML - initial, mountainTheme, beachTheme
