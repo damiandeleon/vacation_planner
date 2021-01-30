@@ -1,5 +1,5 @@
-## Plan Your Vacation
-# Using our unique application, you can pick whether you want a mountain or beach vacation. Once you select the type of vacation you want, you can view the weather at the location of your choice.
+# Plan Your Vacation
+## Using our unique application, you can pick whether you want a mountain or beach vacation. Once you select the type of vacation you want, you can view the weather at the location of your choice.
 
 # User Story
 
