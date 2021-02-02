@@ -1,0 +1,33 @@
+header{
+    text-align: center;
+    background-color: teal;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    float: left;
+    width:  500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+}
+
+/* #mountainTheme {
+
+} */
+
+/* #beachTheme {
+    
+} */
