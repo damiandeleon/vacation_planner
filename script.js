@@ -1,5 +1,6 @@
 // Weather API JavaScript
 var selectedMalibu = document.querySelector("#malibu");
+console.log(selectedMalibu);
 var selectedFlKeys = document.querySelector("#flkeys");
 var selectedHawaii = document.querySelector("#hawaii");
 var selectedBreckenridge = document.querySelector("#breckenridge");
@@ -50,7 +51,7 @@ function Malibu(event) {
 
     })
 }
-
+console.log(selectedMalibu);
 selectedMalibu.addEventListener("click", Malibu)
 
 function FlKeys (event) {
