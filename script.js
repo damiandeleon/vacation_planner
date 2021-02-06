@@ -40,6 +40,12 @@ function Malibu(event) {
             weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardMalibu.append(weatherForecastMalibu);
 
+            document.querySelector(".card1").hidden = false;
+            document.querySelector(".card2").hidden = false;
+            document.querySelector(".card3").hidden = false;
+            document.querySelector(".card4").hidden = false;
+            document.querySelector(".card5").hidden = false;
+            
         }
 
     })
@@ -72,6 +78,11 @@ function FlKeys (event) {
             weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardFlKeys.append(weatherForecastFlKeys);
 
+            document.querySelector(".card1").hidden = false;
+            document.querySelector(".card2").hidden = false;
+            document.querySelector(".card3").hidden = false;
+            document.querySelector(".card4").hidden = false;
+            document.querySelector(".card5").hidden = false;
         }
 
     })
@@ -104,6 +115,11 @@ function Hawaii (event) {
             weatherForecastHawaii.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "%" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardHawaii.append(weatherForecastHawaii);
 
+            document.querySelector(".card1").hidden = false;
+            document.querySelector(".card2").hidden = false;
+            document.querySelector(".card3").hidden = false;
+            document.querySelector(".card4").hidden = false;
+            document.querySelector(".card5").hidden = false;
         }
 
     })
@@ -136,6 +152,11 @@ function Breckenridge (event) {
             weatherForecastBreckenridge.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardBreckenridge.append(weatherForecastBreckenridge);
 
+            document.querySelector(".card1").hidden = false;
+            document.querySelector(".card2").hidden = false;
+            document.querySelector(".card3").hidden = false;
+            document.querySelector(".card4").hidden = false;
+            document.querySelector(".card5").hidden = false;
         }
 
     })
@@ -168,6 +189,11 @@ function Banff (event) {
             weatherForecastBanff.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardBanff.append(weatherForecastBanff);
 
+            document.querySelector(".card1").hidden = false;
+            document.querySelector(".card2").hidden = false;
+            document.querySelector(".card3").hidden = false;
+            document.querySelector(".card4").hidden = false;
+            document.querySelector(".card5").hidden = false;
         }
 
     })
@@ -199,6 +225,12 @@ function Snowshoe (event) {
             var weatherForecastSnowshoe = document.createElement("div"); 
             weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardSnowshoe.append(weatherForecastSnowshoe);
+
+            document.querySelector(".card1").hidden = false;
+            document.querySelector(".card2").hidden = false;
+            document.querySelector(".card3").hidden = false;
+            document.querySelector(".card4").hidden = false;
+            document.querySelector(".card5").hidden = false;
 
         }
 
