@@ -204,6 +204,8 @@ function Snowshoe (event) {
 
     })
 }
+selectedSnowshoe.addEventListener("click", Snowshoe);
+
 getEatFlKeys(eatFlKeys);
 function getEatFlKeys (url){
     fetch(url, {headers: {
@@ -214,5 +216,5 @@ function getEatFlKeys (url){
       }}) 
     .then(response => response.json())
     .then(data => console.log(data));
+    console.log(data);
 }
-selectedSnowshoe.addEventListener("click", Snowshoe)
