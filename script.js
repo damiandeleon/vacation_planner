@@ -1,22 +1,22 @@
 // Weather API JavaScript
-var selectedCabo = document.querySelector("#cabo");
-var selectedSiesta = document.querySelector("#siesta");
+var selectedMalibu = document.querySelector("#malibu");
+var selectedFlKeys = document.querySelector("#flkeys");
 var selectedHawaii = document.querySelector("#hawaii");
 var selectedBreckenridge = document.querySelector("#breckenridge");
 var selectedBanff = document.querySelector("#banff");
-var selectedSwiss = document.querySelector("#swiss");
+var selectedSnowshoe = document.querySelector("#snowshoe");
 
-var weatherCabo = ("https://api.openweathermap.org/data/2.5/onecall?lat=-8.2833&lon=-35.0333&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
-var weatherSiesta = ("https://api.openweathermap.org/data/2.5/onecall?lat=27.302&lon=-82.5515&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
+var weatherMalibu = ("https://api.openweathermap.org/data/2.5/onecall?lat=34.005&lon=-118.8101&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
+var weatherFlKeys = ("https://api.openweathermap.org/data/2.5/onecall?lat=24.5557&lon=-81.7826&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherHawaii = ("https://api.openweathermap.org/data/2.5/onecall?lat=20.785&lon=-156.4656&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherBreckenridge = ("https://api.openweathermap.org/data/2.5/onecall?lat=32.7557&lon=-98.9023&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherBanff = ("https://api.openweathermap.org/data/2.5/onecall?lat=51.1762&lon=-115.5698&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
-var weatherSwiss = ("https://api.openweathermap.org/data/2.5/onecall?lat=47.0505&lon=8.3064&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
+var weatherSnowshoe = ("https://api.openweathermap.org/data/2.5/onecall?lat=38.4128&lon=-79.9964&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 
-function Cabo(event) {
+function Malibu(event) {
     event.preventDefault();
 
-    fetch(weatherCabo)
+    fetch(weatherMalibu)
     .then(function (response){
         return response.json()
     })
@@ -24,31 +24,31 @@ function Cabo(event) {
         console.log(data);
 
         for (i=1; i < 6; i++) {
-            var weatherCardCabo = document.getElementById(i);
-            var imgIconCabo = document.createElement("img");
+            var weatherCardMalibu = document.getElementById(i);
+            var imgIconMalibu = document.createElement("img");
 
-            var dateCabo = new Date(data.daily[i].dt*1000).toLocaleDateString("en-US");
-            weatherCardCabo.textContent = dateCabo;
+            var dateMalibu = new Date(data.daily[i].dt*1000).toLocaleDateString("en-US");
+            weatherCardMalibu.textContent = dateMalibu;
 
-            imgIconCabo.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconCabo.style = "width: 45px; height: 45px; display: inline-block;"
-            weatherCardCabo.append(imgIconCabo);
+            imgIconMalibu.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
+            imgIconMalibu.style = "width: 45px; height: 45px; display: inline-block;"
+            weatherCardMalibu.append(imgIconMalibu);
 
-            var weatherForecastCabo = document.createElement("div"); 
-            weatherForecastCabo.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
-            weatherCardCabo.append(weatherForecastCabo);
+            var weatherForecastMalibu = document.createElement("div"); 
+            weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherCardMalibu.append(weatherForecastMalibu);
 
         }
 
     })
 }
 
-selectedCabo.addEventListener("click", Cabo)
+selectedMalibu.addEventListener("click", Malibu)
 
-function Siesta (event) {
+function FlKeys (event) {
     event.preventDefault();
 
-    fetch(weatherSiesta)
+    fetch(weatherFlKeys)
     .then(function (response){
         return response.json()
     })
@@ -56,26 +56,26 @@ function Siesta (event) {
         console.log(data);
 
         for (i=1; i < 6; i++) {
-            var weatherCardSiesta = document.getElementById(i);
-            var imgIconSiesta = document.createElement("img");
+            var weatherCardFlKeys = document.getElementById(i);
+            var imgIconFlKeys = document.createElement("img");
 
-            var dateSiesta = new Date(data.daily[i].dt*1000).toLocaleDateString("en-US");
-            weatherCardSiesta.textContent = dateSiesta;
+            var dateFlKeys = new Date(data.daily[i].dt*1000).toLocaleDateString("en-US");
+            weatherCardFlKeys.textContent = dateFlKeys;
 
-            imgIconSiesta.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconSiesta.style = "width: 45px; height: 45px; display: inline-block;"
-            weatherCardSiesta.append(imgIconSiesta);
+            imgIconFlKeys.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
+            imgIconFlKeys.style = "width: 45px; height: 45px; display: inline-block;"
+            weatherCardFlKeys.append(imgIconFlKeys);
 
-            var weatherForecastSiesta = document.createElement("div"); 
-            weatherForecastSiesta.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
-            weatherCardSiesta.append(weatherForecastSiesta);
+            var weatherForecastFlKeys = document.createElement("div"); 
+            weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherCardFlKeys.append(weatherForecastFlKeys);
 
         }
 
     })
 }
 
-selectedSiesta.addEventListener("click", Siesta)
+selectedFlKeys.addEventListener("click", FlKeys)
 
 function Hawaii (event) {
     event.preventDefault();
@@ -173,10 +173,10 @@ function Banff (event) {
 
 selectedBanff.addEventListener("click", Banff)
 
-function Swiss (event) {
+function Snowshoe (event) {
     event.preventDefault();
 
-    fetch(weatherSwiss)
+    fetch(weatherSnowshoe)
     .then(function (response){
         return response.json()
     })
@@ -184,23 +184,23 @@ function Swiss (event) {
         console.log(data);
 
         for (i=1; i < 6; i++) {
-            var weatherCardSwiss = document.getElementById(i);
-            var imgIconSwiss = document.createElement("img");
+            var weatherCardSnowshoe = document.getElementById(i);
+            var imgIconSnowshoe = document.createElement("img");
 
-            var dateSwiss = new Date(data.daily[i].dt*1000).toLocaleDateString("en-US");
-            weatherCardSwiss.textContent = dateSwiss;
+            var dateSnowshoe = new Date(data.daily[i].dt*1000).toLocaleDateString("en-US");
+            weatherCardSnowshoe.textContent = dateSnowshoe;
 
-            imgIconSwiss.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconSwiss.style = "width: 45px; height: 45px; display: inline-block;"
-            weatherCardSwiss.append(imgIconSwiss);
+            imgIconSnowshoe.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
+            imgIconSnowshoe.style = "width: 45px; height: 45px; display: inline-block;"
+            weatherCardSnowshoe.append(imgIconSnowshoe);
 
-            var weatherForecastSwiss = document.createElement("div"); 
-            weatherForecastSwiss.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
-            weatherCardSwiss.append(weatherForecastSwiss);
+            var weatherForecastSnowshoe = document.createElement("div"); 
+            weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherCardSnowshoe.append(weatherForecastSnowshoe);
 
         }
 
     })
 }
 
-selectedSwiss.addEventListener("click", Swiss)
+selectedSnowshoe.addEventListener("click", Snowshoe)
