@@ -12,6 +12,8 @@ var weatherHawaii = ("https://api.openweathermap.org/data/2.5/onecall?lat=20.785
 var weatherBreckenridge = ("https://api.openweathermap.org/data/2.5/onecall?lat=32.7557&lon=-98.9023&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherBanff = ("https://api.openweathermap.org/data/2.5/onecall?lat=51.1762&lon=-115.5698&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherSnowshoe = ("https://api.openweathermap.org/data/2.5/onecall?lat=38.4128&lon=-79.9964&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
+var eatFlKeys = "https://developers.zomato.com/api/v2.1/location_details?entity_id=2866&entity_type=city"
+
 
 function Malibu(event) {
     event.preventDefault();
@@ -202,5 +204,15 @@ function Snowshoe (event) {
 
     })
 }
-
+getEatFlKeys(eatFlKeys);
+function getEatFlKeys (url){
+    fetch(url, {headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+      }}) 
+    .then(response => response.json())
+    .then(data => console.log(data));
+}
 selectedSnowshoe.addEventListener("click", Snowshoe)
