@@ -63,10 +63,43 @@ input {
     transform: rotate(45deg);
     cursor: pointer;
 }
-/* #mountainTheme {
 
-} */
+p{
+    text-align: center;
+    font-size: 25px;
+}
 
-/* #beachTheme {
-    
-} */
+.bg-modal2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.modal-content2 {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.form2 {
+    padding: 50px;
+}
+
+.close2 {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 35px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}

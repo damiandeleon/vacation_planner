@@ -239,25 +239,28 @@ function Snowshoe (event) {
 }
 selectedSnowshoe.addEventListener("click", Snowshoe);
 
-getEatFlKeys(eatFlKeys);
-function getEatFlKeys (url){
-    fetch(url, {headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
-      }}) 
-    .then(response => response.json())
-    .then(data => console.log(data));
-    console.log(data);
-}
-firstModal
+// getEatFlKeys(eatFlKeys);
+// function getEatFlKeys (url){
+//     fetch(url, {headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json',
+//         'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+//         // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+//       }}) 
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+//     console.log(data);
+// }
+
 selectedSnowshoe.addEventListener("click", Snowshoe)
 
 // Takes selections and saves them to local storage.
 // document.querySelector('.saveButton').addEventListener('click', function(event){
 //     event.preventDefault();
 //     localStorage.setItem("saveDetails", JSON.stringify());
-//     document.querySelector('').style.display = 'none';
+//     document.querySelector('.bg-modal2').style.display = 'none';
 // });
-main
+
+document.querySelector('.close2').addEventListener('click', function() {
+    document.querySelector('.bg-modal2').style.display = 'none';
+});
