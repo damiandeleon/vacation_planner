@@ -7,13 +7,28 @@ var selectedBreckenridge = document.querySelector("#breckenridge");
 var selectedBanff = document.querySelector("#banff");
 var selectedSnowshoe = document.querySelector("#snowshoe");
 
+// start Damian's code 
+var eateryList = document.querySelector("#eateryList");
+var eatAt1 = document.querySelector("#eatAt1");
+var eatAt2 = document.querySelector("#eatAt2");
+var eatAt3 = document.querySelector("#eatAt3");
+// end Damian's code
+
 var weatherMalibu = ("https://api.openweathermap.org/data/2.5/onecall?lat=34.005&lon=-118.8101&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherFlKeys = ("https://api.openweathermap.org/data/2.5/onecall?lat=24.5557&lon=-81.7826&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherHawaii = ("https://api.openweathermap.org/data/2.5/onecall?lat=20.785&lon=-156.4656&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherBreckenridge = ("https://api.openweathermap.org/data/2.5/onecall?lat=32.7557&lon=-98.9023&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherBanff = ("https://api.openweathermap.org/data/2.5/onecall?lat=51.1762&lon=-115.5698&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherSnowshoe = ("https://api.openweathermap.org/data/2.5/onecall?lat=38.4128&lon=-79.9964&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
-var eatFlKeys = "https://developers.zomato.com/api/v2.1/location_details?entity_id=2866&entity_type=city"
+
+//start Damian's code
+var eatBanff = "https://developers.zomato.com/api/v2.1/location_details?entity_id=2866&entity_type=city"
+var eatMalibu = "https://developers.zomato.com/api/v2.1/location_details?entity_id=10925&entity_type=city"
+var eatFlKeys = "https://developers.zomato.com/api/v2.1/location_details?entity_id=571&entity_type=city"
+var eatHawaii = "https://developers.zomato.com/api/v2.1/location_details?entity_id=640&entity_type=city"
+var eatBreckenridge = "https://developers.zomato.com/api/v2.1/location_details?entity_id=4409&entity_type=city"
+var eatSnowshoe = "https://developers.zomato.com/api/v2.1/location_details?entity_id=10372&entity_type=city"
+//end Damian's code
 
 
 function Malibu(event) {
@@ -50,7 +65,29 @@ function Malibu(event) {
         }
 
     })
+    //start Damian's code
+    getEatMalibu(eatMalibu);
+    //end Damian's code
 }
+//start Damian's code
+function getEatMalibu (url){
+    fetch(url, {headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+      }}) 
+    .then( function(response){
+        return response.json()
+    })
+    .then(function (data) {
+        eatAt1.textContent = data.best_rated_restaurant[0].restaurant.name
+        eatAt2.textContent = data.best_rated_restaurant[1].restaurant.name
+        eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
+    });
+}
+// end Damian's code
+
 console.log(selectedMalibu);
 selectedMalibu.addEventListener("click", Malibu)
 
@@ -87,7 +124,29 @@ function FlKeys (event) {
         }
 
     })
+    //start Damian's code
+    getEatFlKeys(eatFlKeys);
+    //end Damian's code
 }
+
+//start Damian's code
+function getEatFlKeys (url){
+    fetch(url, {headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+      }}) 
+    .then( function(response){
+        return response.json()
+    })
+    .then(function (data) {
+        eatAt1.textContent = data.best_rated_restaurant[0].restaurant.name
+        eatAt2.textContent = data.best_rated_restaurant[1].restaurant.name
+        eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
+    });
+}
+// end Damian's code
 
 selectedFlKeys.addEventListener("click", FlKeys)
 
@@ -124,7 +183,31 @@ function Hawaii (event) {
         }
 
     })
+    //start Damian's code
+    getEatHawaii(eatHawaii);
+    //end Damian's code
 }
+
+//start Damian's code
+function getEatHawaii (url){
+   fetch(url, {headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json',
+       'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+       // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+     }}) 
+   .then( function(response){
+       return response.json()
+   })
+   .then(function (data) {
+       eatAt1.textContent = data.best_rated_restaurant[0].restaurant.name
+       eatAt2.textContent = data.best_rated_restaurant[1].restaurant.name
+       eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
+   });
+}
+// end Damian's code
+
+
 
 selectedHawaii.addEventListener("click", Hawaii)
 
@@ -161,7 +244,29 @@ function Breckenridge (event) {
         }
 
     })
+    //start Damian's code
+    getEatBreckenridge(eatBreckenridge);
+    //end Damian's code
 }
+//start Damian's code
+function getEatBreckenridge (url){
+   fetch(url, {headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json',
+       'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+       // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+     }}) 
+   .then( function(response){
+       return response.json()
+   })
+   .then(function (data) {
+       eatAt1.textContent = data.best_rated_restaurant[0].restaurant.name
+       eatAt2.textContent = data.best_rated_restaurant[1].restaurant.name
+       eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
+   });
+}
+// end Damian's code
+
 
 selectedBreckenridge.addEventListener("click", Breckenridge)
 
@@ -198,7 +303,30 @@ function Banff (event) {
         }
 
     })
+    //start Damian's code
+    getEatBanff(eatBanff);
+    //end Damian's code
 }
+
+//start Damian's code
+function getEatBanff (url){
+    fetch(url, {headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+      }}) 
+    .then( function(response){
+        return response.json()
+    })
+    .then(function (data) {
+        eatAt1.textContent = data.best_rated_restaurant[0].restaurant.name
+        eatAt2.textContent = data.best_rated_restaurant[1].restaurant.name
+        eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
+    });
+}
+// end Damian's code
+
 
 selectedBanff.addEventListener("click", Banff)
 
@@ -236,23 +364,31 @@ function Snowshoe (event) {
         }
 
     })
+    //start Damian's code
+    getEatSnowshoe(eatSnowshoe);
+    //end Damian's code
+
 }
+
+//start Damian's code
+function getEatSnowshoe (url){
+   fetch(url, {headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json',
+       'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
+       // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
+     }}) 
+   .then( function(response){
+       return response.json()
+   })
+   .then(function (data) {
+       eatAt1.textContent = data.best_rated_restaurant[0].restaurant.name
+       eatAt2.textContent = data.best_rated_restaurant[1].restaurant.name
+       eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
+   });
+}
+// end Damian's code
 selectedSnowshoe.addEventListener("click", Snowshoe);
-
-// getEatFlKeys(eatFlKeys);
-// function getEatFlKeys (url){
-//     fetch(url, {headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json',
-//         'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-//         // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
-//       }}) 
-//     .then(response => response.json())
-//     .then(data => console.log(data));
-//     console.log(data);
-// }
-
-selectedSnowshoe.addEventListener("click", Snowshoe)
 
 // Takes selections and saves them to local storage.
 // document.querySelector('.saveButton').addEventListener('click', function(event){
