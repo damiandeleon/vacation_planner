@@ -251,3 +251,13 @@ function getEatFlKeys (url){
     .then(data => console.log(data));
     console.log(data);
 }
+firstModal
+selectedSnowshoe.addEventListener("click", Snowshoe)
+
+// Takes selections and saves them to local storage.
+// document.querySelector('.saveButton').addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem("saveDetails", JSON.stringify());
+//     document.querySelector('').style.display = 'none';
+// });
+main
