@@ -237,6 +237,8 @@ function Snowshoe (event) {
 
     })
 }
+selectedSnowshoe.addEventListener("click", Snowshoe);
+
 getEatFlKeys(eatFlKeys);
 function getEatFlKeys (url){
     fetch(url, {headers: {
@@ -247,7 +249,9 @@ function getEatFlKeys (url){
       }}) 
     .then(response => response.json())
     .then(data => console.log(data));
+    console.log(data);
 }
+firstModal
 selectedSnowshoe.addEventListener("click", Snowshoe)
 
 // Takes selections and saves them to local storage.
@@ -256,3 +260,4 @@ selectedSnowshoe.addEventListener("click", Snowshoe)
 //     localStorage.setItem("saveDetails", JSON.stringify());
 //     document.querySelector('').style.display = 'none';
 // });
+main
