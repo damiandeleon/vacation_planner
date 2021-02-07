@@ -390,13 +390,13 @@ function getEatSnowshoe (url){
 // end Damian's code
 selectedSnowshoe.addEventListener("click", Snowshoe);
 
-firstModal
-selectedSnowshoe.addEventListener("click", Snowshoe)
-
 // Takes selections and saves them to local storage.
 // document.querySelector('.saveButton').addEventListener('click', function(event){
 //     event.preventDefault();
 //     localStorage.setItem("saveDetails", JSON.stringify());
-//     document.querySelector('').style.display = 'none';
+//     document.querySelector('.bg-modal2').style.display = 'none';
 // });
-main
+
+document.querySelector('.close2').addEventListener('click', function() {
+    document.querySelector('.bg-modal2').style.display = 'none';
+});
