@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/style.css">
     <!-- link stylesheets -->
     <title>Your Vacation Details</title>
 </head>
 
 <body>
     <!-- To Do List For Prior to Leaving -->
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor" id="tasks">
         <div class="tile is-vertical is-8">
             <div class="tile">
                 <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
+                    <article class="tile is-child notification tilecolor">
                         <p class="title">Tasks Before You Go</p>
                         <p class="subtitle">Here is a quick list of items to complete prior to leaving!</p>
                         <div class="content">
@@ -35,70 +36,75 @@
         </div>
     </div>
     <!-- These are test buttons for the weather API, can be deleted -->
-    <button class="button" id="malibu">Malibu</button>
-    <button class="button" id="flkeys">Florida Keys</button>
-    <button class="button" id="hawaii">Hawaii</button>
-    <button class="button" id="breckenridge">Breckenridge</button>
-    <button class="button" id="banff">Banff National Park</button>
-    <button class="button" id="snowshoe">Snowshoe</button>
+
+    <div id="weatherforecast">
+        <!-- <button class="button" id="malibu">Malibu</button>
+        <button class="button" id="flkeys">Florida Keys</button>
+        <button class="button" id="hawaii">Hawaii</button>
+        <button class="button" id="breckenridge">Breckenridge</button>
+        <button class="button" id="banff">Banff National Park</button>
+        <button class="button" id="snowshoe">Snowshoe</button>
+ -->
 
 
+        <!-- Stop Delete Here! Important CODE FOLLOWS THIS LINE -->
 
-    <!-- Stop Delete Here! Important CODE FOLLOWS THIS LINE -->
-
-    <!-- Weather API -->
-    <div class="card card1", hidden>
-        <div class="card-content">
-            <div class="content" id="1">
-            </div>
-        </div>
-    </div>
-    <div class="card card2", hidden>
-        <div class="card-content">
-            <div class="content" id="2">
-            </div>
-        </div>
-    </div>
-    <div class="card card3", hidden>
-        <div class="card-content">
-            <div class="content" id="3">
-            </div>
-        </div>
-    </div>
-    <div class="card card4", hidden>
-        <div class="card-content">
-            <div class="content" id="4">
-            </div>
-        </div>
-    </div>
-    <div class="card card5", hidden>
-        <div class="card-content">
-            <div class="content" id="5">
-            </div>
-        </div>
-    </div>
-
-    <!-- Travel API -->
-    <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
-            <div class="tile">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                        <p class="title">Eateries to Checkout</p>
-                        <p class="subtitle">YUM!</p>
-                        <div class="content">
-                            <ul id="eateryList">
-                                <li id="eatAt1">1 item</li>
-                                <li id="eatAt2">2 item</li>
-                                <li id="eatAt3">3 item</li>
-                            </ul>
-                        </div>
-                    </article>
+        <!-- Weather API -->
+        <div class="card cardone">
+            <div class="card-content">
+                <div class="content" id="1">
                 </div>
             </div>
         </div>
-    </div>
+        <div class="card cardtwo">
+            <div class="card-content">
+                <div class="content" id="2">
+                </div>
+            </div>
+        </div>
+        <div class="card cardthree">
+            <div class="card-content">
+                <div class="content" id="3">
+                </div>
+            </div>
+        </div>
+        <div class="card cardfour">
+            <div class="card-content">
+                <div class="content" id="4">
+                </div>
+            </div>
+        </div>
+        <div class="card cardfive">
+            <div class="card-content">
+                <div class="content" id="5">
+                </div>
+            </div>
+        </div>
 
+    </div>
+    <!-- Travel API -->
+    <div id="eats">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-8">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child notification tilecolor">
+                            <p class="title">Eateries to Checkout</p>
+                            <p class="subtitle">Restaurant Finder</p>
+                            <div class="content">
+                                <ul id="eateryList">
+                                    <li id="eatAt1"></li>
+                                    <li id="eatAt2"></li>
+                                    <li id="eatAt3"></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!--Save to Local Storage Modal-->
     <!-- <div class="bg-modal">
         <div class="modal2-content">

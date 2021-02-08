@@ -53,7 +53,7 @@ function Malibu(event) {
             weatherCardMalibu.append(imgIconMalibu);
 
             var weatherForecastMalibu = document.createElement("div"); 
-            weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity: " + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
             weatherCardMalibu.append(weatherForecastMalibu);
 
             document.querySelector(".card1").hidden = false;

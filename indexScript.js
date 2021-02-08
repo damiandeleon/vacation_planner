@@ -1,6 +1,12 @@
 // Global Variables
 var firstName = document.querySelector('.firstName');
 var headerName = document.querySelector('header');
+var mountainButton = document.querySelector("#mountains");
+var beachButton = document.querySelector("#beach");
+var displayBeach = document.getElementById("beachlocations");
+var displayMountains = document.getElementById("mountainlocations");
+
+
 console.log(headerName);
 // Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
 document.querySelector('.button').addEventListener('click', function(event) {
@@ -24,3 +30,29 @@ localStorage.getItem('firstName');
 // document.getElementById('button').addEventListener('click', function() {
 //     document.querySelector('.bg-modal').style.display = 'flex';
 // });
+
+function beachTheme() {
+
+    if (displayBeach.style.display === "none") {
+        displayBeach.style.display = "block";
+    } else {
+        displayBeach.style.display = "none";
+    }
+
+}
+
+function mountainTheme() {
+
+     if (displayMountains.style.display === "none") {
+        displayMountains.style.display = "block";
+     } else {
+         displayMountains.style.display = "none";
+     }
+
+}
+
+// mountainButton.addEventListener("click", mountainTheme);
+
+
+mountainTheme(); beachTheme();
+// beachButton.addEventListener("click", beachTheme);

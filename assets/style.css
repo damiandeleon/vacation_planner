@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color:  #D1EEEC;
+     /* #337F80; */
+}
+
 header{
     text-align: center;
     background-color: teal;
@@ -17,11 +28,18 @@ img {
     width:  500px;
     height: 500px;
     object-fit: cover;
+    margin-left: 95px;
+    margin-top: 30px;
+}
+
+.moutains {
+    margin-right: 60px;
 }
 
 p{
     text-align: center;
     font-size: 25px;
+    color: teal;
 }
 
 .bg-modal {
@@ -49,6 +67,7 @@ p{
 form {
     padding: 50px;
 }
+
 input {
     width: 50%;
     display: block;
@@ -62,6 +81,66 @@ input {
     font-size: 35px;
     transform: rotate(45deg);
     cursor: pointer;
+}
+
+#tasks {
+    float: left;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+#weatherforecast {
+    float: left;
+}
+
+#eats {
+    float: left;
+}
+
+.tilecolor {
+    background-color: teal;
+    color: white;
+}
+
+.cardone {
+    margin-right: 0;
+    padding: 20px;
+    margin-left: 10px;
+    float: left;
+    width: 190px;
+    font-size: 13px;
+}
+
+.cardtwo {
+    padding: 20px;
+    margin: 10px;
+    float: left;
+    width: 190px;
+    font-size: 13px;
+}
+
+.cardthree {
+    padding: 20px;
+    margin: 10px;
+    float: left;
+    width: 190px;
+    font-size: 13px;
+}
+
+.cardfour {
+    padding: 20px;
+    margin: 10px;
+    float: left;
+    width: 190px;
+    font-size: 13px;
+}
+
+.cardfive {
+    padding: 20px;
+    margin: 10px;
+    float: left;
+    width: 190px;
+    font-size: 13px;
 }
 /* #mountainTheme {
 
