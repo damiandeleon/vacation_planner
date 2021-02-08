@@ -390,13 +390,24 @@ function getEatSnowshoe (url){
 // end Damian's code
 selectedSnowshoe.addEventListener("click", Snowshoe);
 
-firstModal
-selectedSnowshoe.addEventListener("click", Snowshoe)
-
+// Global Variables for Modal
+var vacation = document.querySelector('.vacationSelection')
 // Takes selections and saves them to local storage.
-// document.querySelector('.saveButton').addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem("saveDetails", JSON.stringify());
-//     document.querySelector('').style.display = 'none';
-// });
-main
+document.querySelector('.save').addEventListener('click', function(event){
+    event.preventDefault();
+    document.querySelector('.bg-modal2').style.display = 'flex';
+});
+
+document.querySelector('.saveButton').addEventListener('click', function(event){
+    event.preventDefault();
+    localStorage.setItem("destination", vacation.value);
+    console.log(vacation.value);
+    document.querySelector('.bg-modal2').style.display = 'none';
+});
+
+localStorage.getItem("vacationSelected");
+
+// Closes modal if 'x' is clicked.
+document.querySelector('.close2').addEventListener('click', function() {
+    document.querySelector('.bg-modal2').style.display = 'none';
+});
