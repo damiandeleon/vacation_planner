@@ -44,11 +44,20 @@ var eatSnowshoe = "https://developers.zomato.com/api/v2.1/location_details?entit
 // Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
 document.querySelector('.button').addEventListener('click', function(event) {
     event.preventDefault();
-    headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
+    if (firstName.value === "") {
+        document.querySelector('.bg-modal').style.display = 'none';
+    }   else {
+        headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
     console.log(firstName.value);
     console.log(headerName.textContent);
     document.querySelector('.bg-modal').style.display = 'none';
     localStorage.setItem("firstName", firstName.value);
+    }
+    // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
+    // console.log(firstName.value);
+    // console.log(headerName.textContent);
+    // document.querySelector('.bg-modal').style.display = 'none';
+    // localStorage.setItem("firstName", firstName.value);
 });
 
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
