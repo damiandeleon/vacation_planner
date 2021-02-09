@@ -88,8 +88,8 @@ function getEatMalibu (url){
 }
 // end Damian's code
 
-console.log(selectedMalibu);
-selectedMalibu.addEventListener("click", Malibu)
+// console.log(selectedMalibu);
+// selectedMalibu.addEventListener("click", Malibu)
 
 function FlKeys (event) {
     event.preventDefault();
@@ -148,7 +148,7 @@ function getEatFlKeys (url){
 }
 // end Damian's code
 
-selectedFlKeys.addEventListener("click", FlKeys)
+// selectedFlKeys.addEventListener("click", FlKeys)
 
 function Hawaii (event) {
     event.preventDefault();
@@ -209,7 +209,7 @@ function getEatHawaii (url){
 
 
 
-selectedHawaii.addEventListener("click", Hawaii)
+// selectedHawaii.addEventListener("click", Hawaii)
 
 function Breckenridge (event) {
     event.preventDefault();
@@ -268,7 +268,7 @@ function getEatBreckenridge (url){
 // end Damian's code
 
 
-selectedBreckenridge.addEventListener("click", Breckenridge)
+// selectedBreckenridge.addEventListener("click", Breckenridge)
 
 function Banff (event) {
     event.preventDefault();
@@ -328,7 +328,7 @@ function getEatBanff (url){
 // end Damian's code
 
 
-selectedBanff.addEventListener("click", Banff)
+// selectedBanff.addEventListener("click", Banff)
 
 function Snowshoe (event) {
     event.preventDefault();
@@ -388,7 +388,7 @@ function getEatSnowshoe (url){
    });
 }
 // end Damian's code
-selectedSnowshoe.addEventListener("click", Snowshoe);
+// selectedSnowshoe.addEventListener("click", Snowshoe);
 
 // Global Variables for Modal
 var vacation = document.querySelector('.vacationSelection')
@@ -411,3 +411,5 @@ localStorage.getItem("vacationSelected");
 document.querySelector('.close2').addEventListener('click', function() {
     document.querySelector('.bg-modal2').style.display = 'none';
 });
+
+
