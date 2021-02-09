@@ -71,13 +71,28 @@ document.querySelector('.firstSubmit').addEventListener('click', function(event)
 });
 // End code for Modal 2
 
-// Code for Modal 3
+// Code for Modal 3 - mountain theme
 mountainButton.addEventListener('click', function(){
     event.preventDefault();
+    document.querySelector('.bg-modal2').style.display = 'none';
+    document.querySelector(".bg-modal3").style.display = "flex";
     
-    // document.querySelector('.button').addEventListener('click', function(event) {
-    //     event.preventDefault();
-    //     document.querySelector('.bg-modal').style.display = 'none';
+});
+
+// Code for Modal 4 - beach theme
+beachButton.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal2').style.display = 'none';
+    document.querySelector(".bg-modal4").style.display = "flex";
+    
+});
+
+//Code for Modal 5 - Malibu
+selectedMalibu.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal4').style.display = 'none';
+    
+    
 });
 
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
@@ -92,9 +107,6 @@ localStorage.getItem('firstName');
 });
 
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
-document.querySelector('.close').addEventListener('click', function () {
-    document.querySelector('.bg-modal').style.display = 'none';
-});
 
 // Storing the first name to local storage.
 localStorage.getItem('firstName');
@@ -159,7 +171,7 @@ function getEatMalibu (url){
 // end Damian's code
 
 // console.log(selectedMalibu);
-// selectedMalibu.addEventListener("click", Malibu)
+selectedMalibu.addEventListener("click", Malibu)
 
 function FlKeys (event) {
     event.preventDefault();
