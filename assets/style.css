@@ -23,17 +23,24 @@ header{
 
 img {
     max-width: 100%;
-    height: auto;
-    float: left;
+    /* height: auto; */
+    /* float: left; */
     width:  500px;
     height: 500px;
     object-fit: cover;
-    margin-left: 95px;
+    /* margin-left: 20%; */
     margin-top: 30px;
 }
 
-.moutains {
-    margin-right: 60px;
+.center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.travelbtn {
+    width: 150px;
+
 }
 
 p{
@@ -84,17 +91,19 @@ input {
 }
 
 #tasks {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
     margin-left: 15px;
     margin-right: 0;
 }
 
 #weatherforecast {
-    float: left;
-}
+    display: flex;
+    justify-content: flex-start;}
 
 #eats {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .tilecolor {
@@ -106,19 +115,21 @@ input {
     margin-right: 0;
     padding: 20px;
     margin-left: 10px;
-    float: left;
+    display: flex;
+    justify-content: flex-start;
     width: 190px;
     font-size: 13px;
 }
 
-.cardtwo {
+.cardtwo, .cardtwo, .cardthree, .cardfour, .cardfive {
     padding: 20px;
     margin: 10px;
-    float: left;
+    display: flex;
+    justify-content: flex-start;
     width: 190px;
     font-size: 13px;
 }
-
+/* 
 .cardthree {
     padding: 20px;
     margin: 10px;
@@ -141,7 +152,7 @@ input {
     float: left;
     width: 190px;
     font-size: 13px;
-}
+} */
 /* #mountainTheme {
 
 p{

@@ -5,7 +5,8 @@ var mountainButton = document.querySelector("#mountains");
 var beachButton = document.querySelector("#beach");
 var displayBeach = document.getElementById("beachlocations");
 var displayMountains = document.getElementById("mountainlocations");
-
+var themeOptions = document.getElementById("themeoptions");
+var themePictures = document.getElementById("themes");
 
 console.log(headerName);
 // Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
@@ -35,9 +36,13 @@ function beachTheme() {
 
     if (displayBeach.style.display === "none") {
         displayBeach.style.display = "block";
+        themeOptions.style.display = "none";
+        themePictures.style.display = "none";
     } else {
         displayBeach.style.display = "none";
     }
+
+    document.getElementById("themeoptions").hidden = true;
 
 }
 
@@ -45,9 +50,13 @@ function mountainTheme() {
 
      if (displayMountains.style.display === "none") {
         displayMountains.style.display = "block";
-     } else {
+        themeOptions.style.display = "none";
+        themePictures.style.display = "none";
+
+    } else {
          displayMountains.style.display = "none";
-     }
+    }
+
 
 }
 
