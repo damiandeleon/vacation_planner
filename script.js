@@ -87,6 +87,14 @@ beachButton.addEventListener('click', function(){
     
 });
 
+//Code for Modal 5 - Malibu
+selectedMalibu.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal4').style.display = 'none';
+    
+    
+});
+
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
 // document.querySelector('.close2').addEventListener('click', function () {
 //     document.querySelector('.bg-modal2').style.display = 'none';
@@ -163,7 +171,7 @@ function getEatMalibu (url){
 // end Damian's code
 
 // console.log(selectedMalibu);
-// selectedMalibu.addEventListener("click", Malibu)
+selectedMalibu.addEventListener("click", Malibu)
 
 function FlKeys (event) {
     event.preventDefault();
