@@ -81,15 +81,6 @@ input {
     margin: 15px auto;
 }
 
-.close {
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 35px;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
 #tasks {
     display: flex;
     justify-content: flex-start;
@@ -189,13 +180,4 @@ p{
 
 .form2 {
     padding: 50px;
-}
-
-.close2 {
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 35px;
-    transform: rotate(45deg);
-    cursor: pointer;
 }
