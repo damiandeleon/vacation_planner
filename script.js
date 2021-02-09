@@ -91,10 +91,42 @@ beachButton.addEventListener('click', function(){
 selectedMalibu.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
+        
+});
+
+selectedFlKeys.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal4').style.display = 'none';
+        
+});
+
+selectedHawaii.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal4').style.display = 'none';
     
     
 });
 
+selectedBreckenridge.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal3').style.display = 'none';
+    
+    
+});
+
+selectedBanff.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal3').style.display = 'none';
+    
+    
+});
+
+selectedSnowshoe.addEventListener('click', function(){
+    event.preventDefault();
+    document.querySelector('.bg-modal3').style.display = 'none';
+    
+    
+});
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
 // document.querySelector('.close2').addEventListener('click', function () {
 //     document.querySelector('.bg-modal2').style.display = 'none';
@@ -113,7 +145,7 @@ localStorage.getItem('firstName');
 // End Code for Modal 2
 
 
-function Malibu(event) {
+function malibu(event) {
     event.preventDefault();
 
     fetch(weatherMalibu)
@@ -138,11 +170,6 @@ function Malibu(event) {
             weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity: " + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
             weatherCardMalibu.append(weatherForecastMalibu);
 
-            document.querySelector(".card1").hidden = false;
-            document.querySelector(".card2").hidden = false;
-            document.querySelector(".card3").hidden = false;
-            document.querySelector(".card4").hidden = false;
-            document.querySelector(".card5").hidden = false;
             
         }
 
@@ -171,9 +198,9 @@ function getEatMalibu (url){
 // end Damian's code
 
 // console.log(selectedMalibu);
-selectedMalibu.addEventListener("click", Malibu)
+selectedMalibu.addEventListener("click", malibu)
 
-function FlKeys (event) {
+function flKeys (event) {
     event.preventDefault();
 
     fetch(weatherFlKeys)
@@ -198,11 +225,6 @@ function FlKeys (event) {
             weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardFlKeys.append(weatherForecastFlKeys);
 
-            document.querySelector(".card1").hidden = false;
-            document.querySelector(".card2").hidden = false;
-            document.querySelector(".card3").hidden = false;
-            document.querySelector(".card4").hidden = false;
-            document.querySelector(".card5").hidden = false;
         }
 
     })
@@ -230,9 +252,9 @@ function getEatFlKeys (url){
 }
 // end Damian's code
 
-// selectedFlKeys.addEventListener("click", FlKeys)
+selectedFlKeys.addEventListener("click", flKeys)
 
-function Hawaii (event) {
+function hawaii (event) {
     event.preventDefault();
 
     fetch(weatherHawaii)
@@ -257,11 +279,7 @@ function Hawaii (event) {
             weatherForecastHawaii.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "%" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardHawaii.append(weatherForecastHawaii);
 
-            document.querySelector(".card1").hidden = false;
-            document.querySelector(".card2").hidden = false;
-            document.querySelector(".card3").hidden = false;
-            document.querySelector(".card4").hidden = false;
-            document.querySelector(".card5").hidden = false;
+    
         }
 
     })
@@ -291,9 +309,9 @@ function getEatHawaii (url){
 
 
 
-// selectedHawaii.addEventListener("click", Hawaii)
+selectedHawaii.addEventListener("click", hawaii)
 
-function Breckenridge (event) {
+function breckenridge (event) {
     event.preventDefault();
 
     fetch(weatherBreckenridge)
@@ -318,11 +336,7 @@ function Breckenridge (event) {
             weatherForecastBreckenridge.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardBreckenridge.append(weatherForecastBreckenridge);
 
-            document.querySelector(".card1").hidden = false;
-            document.querySelector(".card2").hidden = false;
-            document.querySelector(".card3").hidden = false;
-            document.querySelector(".card4").hidden = false;
-            document.querySelector(".card5").hidden = false;
+  
         }
 
     })
@@ -350,9 +364,9 @@ function getEatBreckenridge (url){
 // end Damian's code
 
 
-// selectedBreckenridge.addEventListener("click", Breckenridge)
+selectedBreckenridge.addEventListener("click", breckenridge)
 
-function Banff (event) {
+function banff (event) {
     event.preventDefault();
 
     fetch(weatherBanff)
@@ -377,11 +391,7 @@ function Banff (event) {
             weatherForecastBanff.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardBanff.append(weatherForecastBanff);
 
-            document.querySelector(".card1").hidden = false;
-            document.querySelector(".card2").hidden = false;
-            document.querySelector(".card3").hidden = false;
-            document.querySelector(".card4").hidden = false;
-            document.querySelector(".card5").hidden = false;
+
         }
 
     })
@@ -410,9 +420,9 @@ function getEatBanff (url){
 // end Damian's code
 
 
-// selectedBanff.addEventListener("click", Banff)
+selectedBanff.addEventListener("click", banff)
 
-function Snowshoe (event) {
+function snowshoe (event) {
     event.preventDefault();
 
     fetch(weatherSnowshoe)
@@ -437,11 +447,7 @@ function Snowshoe (event) {
             weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
             weatherCardSnowshoe.append(weatherForecastSnowshoe);
 
-            document.querySelector(".card1").hidden = false;
-            document.querySelector(".card2").hidden = false;
-            document.querySelector(".card3").hidden = false;
-            document.querySelector(".card4").hidden = false;
-            document.querySelector(".card5").hidden = false;
+
 
         }
 
@@ -470,7 +476,7 @@ function getEatSnowshoe (url){
    });
 }
 // end Damian's code
-// selectedSnowshoe.addEventListener("click", Snowshoe);
+selectedSnowshoe.addEventListener("click", snowshoe);
 
 // Global Variables for Modal
 // var vacation = document.querySelector('.vacationSelection')

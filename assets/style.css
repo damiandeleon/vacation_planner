@@ -103,18 +103,8 @@ input {
     position: static;
 }
 
-.cardone {
-    margin-right: 0;
-    padding: 20px;
-    margin-left: 10px;
-    display: flex;
-    justify-content: flex-start;
-    width: 190px;
-    font-size: 13px;
-    position: static;
-}
 
-.cardtwo, .cardtwo, .cardthree, .cardfour, .cardfive {
+.cardone, .cardtwo, .cardtwo, .cardthree, .cardfour, .cardfive {
     padding: 20px;
     margin: 10px;
     display: flex;
