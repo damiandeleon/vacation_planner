@@ -163,11 +163,12 @@ function malibu(event) {
             weatherCardMalibu.textContent = dateMalibu;
 
             imgIconMalibu.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconMalibu.style = "width: 45px; height: 45px; display: inline-block;"
+            imgIconMalibu.style = "width: 45px; height: 45px; justify-content: center;"
             weatherCardMalibu.append(imgIconMalibu);
 
             var weatherForecastMalibu = document.createElement("div"); 
             weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity: " + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastMalibu.style = "justify-content: center;"
             weatherCardMalibu.append(weatherForecastMalibu);
 
             
@@ -218,11 +219,12 @@ function flKeys (event) {
             weatherCardFlKeys.textContent = dateFlKeys;
 
             imgIconFlKeys.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconFlKeys.style = "width: 45px; height: 45px; display: inline-block;"
+            imgIconFlKeys.style = "width: 45px; height: 45px; justify-content: center;"
             weatherCardFlKeys.append(imgIconFlKeys);
 
             var weatherForecastFlKeys = document.createElement("div"); 
-            weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastFlKeys.style = "justify-content: center;"
             weatherCardFlKeys.append(weatherForecastFlKeys);
 
         }
@@ -272,11 +274,12 @@ function hawaii (event) {
             weatherCardHawaii.textContent = dateHawaii;
 
             imgIconHawaii.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconHawaii.style = "width: 45px; height: 45px; display: inline-block;"
+            imgIconHawaii.style = "width: 45px; height: 45px; justify-content: center;"
             weatherCardHawaii.append(imgIconHawaii);
 
             var weatherForecastHawaii = document.createElement("div"); 
-            weatherForecastHawaii.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "%" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherForecastHawaii.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastHawaii.style = "justify-content: center;"
             weatherCardHawaii.append(weatherForecastHawaii);
 
     
@@ -329,11 +332,12 @@ function breckenridge (event) {
             weatherCardBreckenridge.textContent = dateBreckenridge;
 
             imgIconBreckenridge.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconBreckenridge.style = "width: 45px; height: 45px; display: inline-block;"
+            imgIconBreckenridge.style = "width: 45px; height: 45px; justify-content: center;"
             weatherCardBreckenridge.append(imgIconBreckenridge);
 
             var weatherForecastBreckenridge = document.createElement("div"); 
-            weatherForecastBreckenridge.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherForecastBreckenridge.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastBreckenridge.style = "justify-content: center;"
             weatherCardBreckenridge.append(weatherForecastBreckenridge);
 
   
@@ -384,11 +388,12 @@ function banff (event) {
             weatherCardBanff.textContent = dateBanff;
 
             imgIconBanff.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconBanff.style = "width: 45px; height: 45px; display: inline-block;"
+            imgIconBanff.style = "width: 45px; height: 45px; justify-content: center;"
             weatherCardBanff.append(imgIconBanff);
 
             var weatherForecastBanff = document.createElement("div"); 
-            weatherForecastBanff.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherForecastBanff.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastBanff.style = "justify-content: center;"
             weatherCardBanff.append(weatherForecastBanff);
 
 
@@ -440,11 +445,12 @@ function snowshoe (event) {
             weatherCardSnowshoe.textContent = dateSnowshoe;
 
             imgIconSnowshoe.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png");
-            imgIconSnowshoe.style = "width: 45px; height: 45px; display: inline-block;"
+            imgIconSnowshoe.style = "width: 45px; height: 45px; justify-content: center;"
             weatherCardSnowshoe.append(imgIconSnowshoe);
 
             var weatherForecastSnowshoe = document.createElement("div"); 
-            weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + "Night Temp: " + data.daily[i].temp.night + "°F" + "Humidity" + data.daily[i].humidity + "%" + "Wind Speed" + data.daily[i].wind_speed + "MPH";
+            weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastSnowshoe.style = "justify-content: center;"
             weatherCardSnowshoe.append(weatherForecastSnowshoe);
 
 

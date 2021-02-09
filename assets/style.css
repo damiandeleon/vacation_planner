@@ -85,18 +85,17 @@ input {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+
+#weatherforecast, #eats {
+    display: flex;
+    justify-content: center;
+}
+
+li {
     text-align: center;
-}
-
-
-#weatherforecast {
-    display: flex;
-    justify-content: center;
-}
-
-.eats {
-    display: flex;
-    justify-content: center;
+    list-style-position: inside;
 }
 
 .tilecolor {
@@ -112,8 +111,9 @@ input {
     display: flex;
     justify-content: flex-start;
     width: 190px;
-    font-size: 13px;
+    font-size: 15px;
     position: static;
+    color: teal;
 }
 
 p{
