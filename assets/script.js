@@ -48,15 +48,15 @@ function checkLocalStorage(){
     } else {
         document.querySelector('.button').addEventListener('click', function(event) {
             event.preventDefault();
-            if (firstName.value === "") {
-                document.querySelector('.bg-modal').style.display = 'none';
-            }   else {
-                headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
+            // if (firstName.value === "") {
+            //     document.querySelector('.bg-modal').style.display = 'none';
+            // }   else {
+            //     headerName.textContent = "Plan Your Next Vacation";
             // console.log(firstName.value);
             // console.log(headerName.textContent);
             document.querySelector('.bg-modal').style.display = 'none';
             localStorage.setItem("firstName", firstName.value);
-            }
+            // }
             // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
             // console.log(firstName.value);
             // console.log(headerName.textContent);
@@ -545,5 +545,6 @@ selectedSnowshoe.addEventListener("click", snowshoe);
 // document.querySelector('.close2').addEventListener('click', function() {
 //     document.querySelector('.bg-modal2').style.display = 'none';
 // });
+
 
 
