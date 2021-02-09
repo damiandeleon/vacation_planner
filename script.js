@@ -65,7 +65,7 @@ document.querySelector('.button').addEventListener('click', function(event) {
 //     document.querySelector('.bg-modal').style.display = 'none';
 // });
 
-// Storing the first name to local storage.
+// Getting the first name to local storage.
 localStorage.getItem('firstName');
 // End code for Modal 1
 
@@ -86,6 +86,7 @@ mountainButton.addEventListener('click', function(){
     document.querySelector('.bg-modal2').style.display = 'none';
     document.querySelector(".bg-modal3").style.display = "flex";
     
+    
 });
 
 // Code for Modal 4 - beach theme
@@ -100,40 +101,40 @@ beachButton.addEventListener('click', function(){
 selectedMalibu.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
-        
+    localStorage.setItem("destination", selectedMalibu.value);
 });
 
 selectedFlKeys.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
-        
+    localStorage.setItem("destination", selectedFlKeys.value);
 });
 
 selectedHawaii.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
-    
+    localStorage.setItem("destination", selectedHawaii.value);
     
 });
 
 selectedBreckenridge.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
-    
+    localStorage.setItem("destination", selectedBreckenridge.value);
     
 });
 
 selectedBanff.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
-    
+    localStorage.setItem("destination", selectedBanff.value);
     
 });
 
 selectedSnowshoe.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
-    
+    localStorage.setItem("destination", selectedSnowshoe.value);
     
 });
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
@@ -156,7 +157,6 @@ localStorage.getItem('firstName');
 
 function malibu(event) {
     event.preventDefault();
-
     fetch(weatherMalibu)
     .then(function (response){
         return response.json()
