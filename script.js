@@ -74,9 +74,10 @@ document.querySelector('.firstSubmit').addEventListener('click', function(event)
 // Code for Modal 3
 mountainButton.addEventListener('click', function(){
     event.preventDefault();
-    document.querySelector('.button').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.querySelector('.bg-modal').style.display = 'none';
+    
+    // document.querySelector('.button').addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     document.querySelector('.bg-modal').style.display = 'none';
 });
 
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
