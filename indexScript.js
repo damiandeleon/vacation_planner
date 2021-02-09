@@ -56,8 +56,6 @@ function mountainTheme() {
     } else {
          displayMountains.style.display = "none";
     }
-
-
 }
 
 // mountainButton.addEventListener("click", mountainTheme);

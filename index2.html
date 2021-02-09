@@ -11,8 +11,48 @@
 </head>
 
 <body>
+    <header>Plan Your Perfect Vacation</header>
+    <!--First Modal-->
+    <div class="bg-modal">
+        <div class="modal-content">
+            <!-- <div class="close">+</div> -->
+            <!-- <img src="" alt=""> -->
+            <form action="">
+                <p>Please enter your first name.</p>
+                <input class="firstName" type="text" placeholder="First Name">
+                <a href="" class="button firstSubmit">Submit</a>
+            </form>
+        </div>
+    </div>
+    <!--Second Modal-->
+    <div class="bg-modal2">
+        <div class="modal-content2">
+            <!-- <div class="close2">+</div> -->
+            <!-- <img src="" alt=""> -->
+            <div class="columns is-mobile is-mobile is-desktop is-tablet is-widescreen is-fullhd" class="button" id="themes">
+                <!-- COLUMN 1-->
+                <div class="column">
+        
+                    <img src="https://www.jetsetter.com/wp-content/uploads/sites/7/2018/04/q3ybXLmx-1380x690.jpeg"
+                        alt="cabin at foot of mountain">
+                    <button onclick="mountainTheme()" class="button is-info is-light" id="mountains">Mountains</button>
+        
+                </div>
+        
+                <!-- COLUMN 2-->
+                <div class="column">
+        
+                    <img src="https://travel.home.sndimg.com/content/dam/images/travel/stock/2018/4/10/iStock-672425798.-beach_chairs.jpg.rend.hgtvcom.1280.853.suffix/1523383408931.jpeg"
+                        alt="couple lounging near beachfront">
+                    <button onclick="beachTheme()" class="button is-info is-light" id="beach">Beach</button>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- To Do List For Prior to Leaving -->
-    <div class="tile is-ancestor" id="tasks">
+    <div class="tile is-ancestor is-clearfix" id="tasks">
         <div class="tile is-vertical is-8">
             <div class="tile">
                 <div class="tile is-parent is-vertical">
@@ -107,18 +147,18 @@
     </div>
     <!--Save to Local Storage Modal-->
 
-    <button class="button save">Save!</button>
-    <div class="bg-modal2">
+    <!-- <button class="button save">Save!</button> -->
+    <!-- <div class="bg-modal2">
         <div class="modal-content2">
             <div class="close2">+</div>
-            <!-- <img src="" alt=""> -->
+            <img src="" alt="">
             <form class="form2" action="">
                 <p>Enter the destination name and click submit to save to your local storage.</p>
                 <input class="vacationSelection" type="text" placeholder="Destination">
                 <a href="" class="button saveButton">Submit</a>
             </form>
         </div>
-    </div>
+    </div> -->
 
     
     <div class="bg-modal2">
