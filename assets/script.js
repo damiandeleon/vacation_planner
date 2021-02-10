@@ -253,9 +253,19 @@ function malibu(event) {
             weatherCardMalibu.append(imgIconMalibu);
 
             var weatherForecastMalibu = document.createElement("div"); 
-            weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity: " + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastMalibu.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" 
+            var malibuNightTemp = document.createElement("div");
+            malibuNightTemp.innerHTML = "Night Temp: " + data.daily[i].temp.night + "°F"
+            var humidityMalibu = document.createElement("div");
+            humidityMalibu = "Humidity: " + data.daily[i].humidity + "%";
+            var windMalibu = document.createElement("div");
+            windMalibu.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
             weatherForecastMalibu.style = "justify-content: center;"
-            weatherCardMalibu.append(weatherForecastMalibu);
+            malibuNightTemp.style = "justify-content: center;"
+            humidityMalibu.style = "justify-content: center;"
+            windMalibu.style = "justify-content: center;"
+
+            weatherCardMalibu.append(weatherForecastMalibu, malibuNightTemp, humidityMalibu, windMalibu);
 
             
         }
@@ -309,9 +319,19 @@ function flKeys (event) {
             weatherCardFlKeys.append(imgIconFlKeys);
 
             var weatherForecastFlKeys = document.createElement("div"); 
-            weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastFlKeys.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F";
             weatherForecastFlKeys.style = "justify-content: center;"
-            weatherCardFlKeys.append(weatherForecastFlKeys);
+            var flKeysNight = document.createElement("div");
+            flKeysNight.innerHTML = "Night Temp: " + data.daily[i].temp.night + "°F";
+            flKeysNight.style = "justify-content: center;"
+            var flHumidity = document.createElement("div");
+            flHumidity.innerHTML = "Humidity: " + data.daily[i].humidity + "%";
+            flHumidity.style = "justify-content: center;"
+            var flWind = document.createElement("div");
+            flWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            flWind.style = "justify-content: center;"
+
+            weatherCardFlKeys.append(weatherForecastFlKeys, flKeysNight, flHumidity, flWind);
 
         }
 
@@ -364,9 +384,19 @@ function hawaii (event) {
             weatherCardHawaii.append(imgIconHawaii);
 
             var weatherForecastHawaii = document.createElement("div"); 
-            weatherForecastHawaii.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastHawaii.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F"; 
             weatherForecastHawaii.style = "justify-content: center;"
-            weatherCardHawaii.append(weatherForecastHawaii);
+            var hawaiiNight = document.createElement("div");
+            hawaiiNight.innerHTML = "Night Temp: " + data.daily[i].temp.night + "°F";
+            hawaiiNight.style = "justify-content: center;"
+            var hawaiiHumidity = document.createElement("div");
+            hawaiiHumidity.innerHTML = "Humidity: " + data.daily[i].humidity + "%";
+            hawaiiHumidity.style = "justify-content: center;"
+            var hawaiiWind = document.createElement("div");
+            hawaiiWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            hawaiiWind.style = "justify-content: center;"
+
+            weatherCardHawaii.append(weatherForecastHawaii, hawaiiNight, hawaiiHumidity, hawaiiWind);
 
     
         }
@@ -422,9 +452,19 @@ function breckenridge (event) {
             weatherCardBreckenridge.append(imgIconBreckenridge);
 
             var weatherForecastBreckenridge = document.createElement("div"); 
-            weatherForecastBreckenridge.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastBreckenridge.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F";
             weatherForecastBreckenridge.style = "justify-content: center;"
-            weatherCardBreckenridge.append(weatherForecastBreckenridge);
+            var breckNight = document.createElement("div");
+            breckNight.innerHTML = "Night Temp: " + data.daily[i].temp.night + "°F";
+            breckNight.style = "justify-content: center;"
+            var breckHumidity = document.createElement("div");
+            breckHumidity.innerHTML = "Humidity: " + data.daily[i].humidity + "%";
+            breckHumidity.style = "justify-content: center;"
+            var breckWind = document.createElement("div");
+            breckWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            breckWind.style = "justify-content: center;"
+
+            weatherCardBreckenridge.append(weatherForecastBreckenridge, breckNight, breckHumidity, breckWind);
 
   
         }
@@ -478,9 +518,19 @@ function banff (event) {
             weatherCardBanff.append(imgIconBanff);
 
             var weatherForecastBanff = document.createElement("div"); 
-            weatherForecastBanff.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastBanff.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F";
             weatherForecastBanff.style = "justify-content: center;"
-            weatherCardBanff.append(weatherForecastBanff);
+            var banffNight = document.createElement("div");
+            banffNight.innerHTML = "Night Temp: " + data.daily[i].temp.night + "°F";
+            banffNight.style = "justify-content: center;"
+            var banffHumidity = document.createElement("div");
+            banffHumidity.innerHTML = "Humidity: " + data.daily[i].humidity + "%";
+            banffHumidity.style = "justify-content: center;"
+            var banffWind = document.createElement("div");
+            banffWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            banffWind.style = "justify-content: center;"
+
+            weatherCardBanff.append(weatherForecastBanff, banffNight, banffHumidity, banffWind);
 
 
         }
@@ -535,9 +585,20 @@ function snowshoe (event) {
             weatherCardSnowshoe.append(imgIconSnowshoe);
 
             var weatherForecastSnowshoe = document.createElement("div"); 
-            weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F" + " " + "Night Temp: " + data.daily[i].temp.night + "°F" + " " + "Humidity" + data.daily[i].humidity + "%" + " " + "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            weatherForecastSnowshoe.innerHTML = "Day Temp: " + data.daily[i].temp.day + "°F";
             weatherForecastSnowshoe.style = "justify-content: center;"
-            weatherCardSnowshoe.append(weatherForecastSnowshoe);
+            var snowshoeNight = document.createElement("div");
+            snowshoeNight.innerHTML = "Night Temp: " + data.daily[i].temp.night + "°F";
+            snowshoeNight.style = "justify-content: center;"
+            var snowshoeHumidity = document.createElement("div");
+            snowshoeHumidity.innerHTML = "Humidity: " + data.daily[i].humidity + "%";
+            snowshoeHumidity.style = "justify-content: center;"
+            var snowshoeWind = document.createElement("div");
+            snowshoeWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
+            snowshoeWind.style = "justify-content: center;"
+
+
+            weatherCardSnowshoe.append(weatherForecastSnowshoe, snowshoeNight, snowshoeHumidity, snowshoeWind);
 
 
 

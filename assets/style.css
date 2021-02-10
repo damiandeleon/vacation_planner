@@ -36,12 +36,9 @@ header{
 
 img {
     max-width: 100%;
-    /* height: auto; */
-    /* float: left; */
     width:  500px;
     height: 500px;
     object-fit: cover;
-    /* margin-left: 20%; */
     margin-top: 30px;
 }
 
@@ -107,9 +104,9 @@ li {
 
 
 .cardone, .cardtwo, .cardtwo, .cardthree, .cardfour, .cardfive {
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    display: block;
+    display: flex;
     justify-content: center;
     width: 190px;
     font-size: 15px;
