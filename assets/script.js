@@ -8,6 +8,12 @@ var displayMountains = document.getElementById("mountainlocations");
 var themeOptions = document.getElementById("themeoptions");
 var themePictures = document.getElementById("themes");
 
+var greeting = document.getElementById('greeting');
+
+// Weather API JavaScript
+var selectedMalibu = document.querySelector("#malibu");
+
+
 // Weather API JavaScript
 var selectedMalibu = document.querySelector("#malibu");
 console.log(selectedMalibu);
@@ -40,6 +46,55 @@ var eatBreckenridge = "https://developers.zomato.com/api/v2.1/location_details?e
 var eatSnowshoe = "https://developers.zomato.com/api/v2.1/location_details?entity_id=10372&entity_type=city"
 //end Damian's code
 
+checkLocalStorage();
+function checkLocalStorage(){
+    if (localStorage.getItem('destination') !== null) {
+        console.log("true");
+        greeting.textContent = "Welcome back "+localStorage.getItem("firstName") + "!  Your last search was "+ localStorage.getItem("destination") +". Enter your name again and click Submit to start a new search."
+        // document.querySelector('.firstName').remove();
+    } else {
+        document.querySelector('.button').addEventListener('click', function(event) {
+            event.preventDefault();
+            // if (firstName.value === "") {
+            //     document.querySelector('.bg-modal').style.display = 'none';
+            // }   else {
+            //     headerName.textContent = "Plan Your Next Vacation";
+            // console.log(firstName.value);
+            // console.log(headerName.textContent);
+            document.querySelector('.bg-modal').style.display = 'none';
+            localStorage.setItem("firstName", firstName.value);
+            // }
+            // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
+            // console.log(firstName.value);
+            // console.log(headerName.textContent);
+            // document.querySelector('.bg-modal').style.display = 'none';
+            // localStorage.setItem("firstName", firstName.value);
+        });
+    };
+
+    
+}
+
+// Code for Modal 1
+// Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
+// document.querySelector('.button').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     if (firstName.value === "") {
+//         document.querySelector('.bg-modal').style.display = 'none';
+//     }   else {
+//         headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
+//     // console.log(firstName.value);
+//     // console.log(headerName.textContent);
+//     document.querySelector('.bg-modal').style.display = 'none';
+//     localStorage.setItem("firstName", firstName.value);
+//     }
+//     // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
+//     // console.log(firstName.value);
+//     // console.log(headerName.textContent);
+//     // document.querySelector('.bg-modal').style.display = 'none';
+//     // localStorage.setItem("firstName", firstName.value);
+// });
+
 // Code for Modal 1
 // Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
 document.querySelector('.button').addEventListener('click', function(event) {
@@ -66,7 +121,11 @@ document.querySelector('.button').addEventListener('click', function(event) {
 // });
 
 // Getting the first name to local storage.
+
+// localStorage.getItem('firstName');
+
 localStorage.getItem('firstName');
+
 // End code for Modal 1
 
 // Code for Modal 2
@@ -102,18 +161,28 @@ selectedMalibu.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
     localStorage.setItem("destination", selectedMalibu.value);
+
+    document.querySelector('.bg-modal').style.display = 'none';
+
+
 });
 
 selectedFlKeys.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
     localStorage.setItem("destination", selectedFlKeys.value);
+
+    document.querySelector('.bg-modal').style.display = 'none';
+
 });
 
 selectedHawaii.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
     localStorage.setItem("destination", selectedHawaii.value);
+
+    document.querySelector('.bg-modal').style.display = 'none';
+
     
 });
 
@@ -121,13 +190,19 @@ selectedBreckenridge.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
     localStorage.setItem("destination", selectedBreckenridge.value);
-    
+
+    document.querySelector('.bg-modal').style.display = 'none';
+
+  
 });
 
 selectedBanff.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
     localStorage.setItem("destination", selectedBanff.value);
+
+    document.querySelector('.bg-modal').style.display = 'none';
+
     
 });
 
@@ -135,7 +210,9 @@ selectedSnowshoe.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
     localStorage.setItem("destination", selectedSnowshoe.value);
-    
+
+    document.querySelector('.bg-modal').style.display = 'none';
+
 });
 // Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
 // document.querySelector('.close2').addEventListener('click', function () {

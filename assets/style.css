@@ -1,3 +1,4 @@
+Style.css
 * {
     box-sizing: border-box;
     padding: 0;
@@ -108,8 +109,8 @@ li {
 .cardone, .cardtwo, .cardtwo, .cardthree, .cardfour, .cardfive {
     padding: 20px;
     margin: 10px;
-    display: flex;
-    justify-content: flex-start;
+    display: block;
+    justify-content: center;
     width: 190px;
     font-size: 15px;
     position: static;
@@ -186,4 +187,8 @@ p{
     text-align: center;
     padding: 20px;
     position: relative;
+}
+
+#greeting {
+    font-size: 16px;
 }
