@@ -7,7 +7,6 @@ var displayBeach = document.getElementById("beachlocations");
 var displayMountains = document.getElementById("mountainlocations");
 var themeOptions = document.getElementById("themeoptions");
 var themePictures = document.getElementById("themes");
-
 var greeting = document.getElementById('greeting');
 
 // Weather API JavaScript
@@ -23,13 +22,13 @@ var selectedBreckenridge = document.querySelector("#breckenridge");
 var selectedBanff = document.querySelector("#banff");
 var selectedSnowshoe = document.querySelector("#snowshoe");
 
-// start Damian's code 
+// Zomato Global Variables
 var eateryList = document.querySelector("#eateryList");
 var eatAt1 = document.querySelector("#eatAt1");
 var eatAt2 = document.querySelector("#eatAt2");
 var eatAt3 = document.querySelector("#eatAt3");
-// end Damian's code
 
+// OpenWeather URLs
 var weatherMalibu = ("https://api.openweathermap.org/data/2.5/onecall?lat=34.005&lon=-118.8101&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherFlKeys = ("https://api.openweathermap.org/data/2.5/onecall?lat=24.5557&lon=-81.7826&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherHawaii = ("https://api.openweathermap.org/data/2.5/onecall?lat=20.785&lon=-156.4656&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
@@ -37,15 +36,15 @@ var weatherBreckenridge = ("https://api.openweathermap.org/data/2.5/onecall?lat=
 var weatherBanff = ("https://api.openweathermap.org/data/2.5/onecall?lat=51.1762&lon=-115.5698&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 var weatherSnowshoe = ("https://api.openweathermap.org/data/2.5/onecall?lat=38.4128&lon=-79.9964&exclude=current,hourly,minutely,alerts&units=imperial&appid=73764a83501606e04b74a8e0281a654b")
 
-//start Damian's code
+// Zomato URLs
 var eatBanff = "https://developers.zomato.com/api/v2.1/location_details?entity_id=2866&entity_type=city"
 var eatMalibu = "https://developers.zomato.com/api/v2.1/location_details?entity_id=10925&entity_type=city"
 var eatFlKeys = "https://developers.zomato.com/api/v2.1/location_details?entity_id=571&entity_type=city"
 var eatHawaii = "https://developers.zomato.com/api/v2.1/location_details?entity_id=640&entity_type=city"
 var eatBreckenridge = "https://developers.zomato.com/api/v2.1/location_details?entity_id=4409&entity_type=city"
 var eatSnowshoe = "https://developers.zomato.com/api/v2.1/location_details?entity_id=10372&entity_type=city"
-//end Damian's code
 
+// Local Storage Logic
 checkLocalStorage();
 function checkLocalStorage(){
     if (localStorage.getItem('destination') !== null) {
@@ -55,45 +54,13 @@ function checkLocalStorage(){
     } else {
         document.querySelector('.button').addEventListener('click', function(event) {
             event.preventDefault();
-            // if (firstName.value === "") {
-            //     document.querySelector('.bg-modal').style.display = 'none';
-            // }   else {
-            //     headerName.textContent = "Plan Your Next Vacation";
-            // console.log(firstName.value);
-            // console.log(headerName.textContent);
             document.querySelector('.bg-modal').style.display = 'none';
             localStorage.setItem("firstName", firstName.value);
-            // }
-            // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
-            // console.log(firstName.value);
-            // console.log(headerName.textContent);
-            // document.querySelector('.bg-modal').style.display = 'none';
-            // localStorage.setItem("firstName", firstName.value);
         });
     };
 
     
 }
-
-// Code for Modal 1
-// Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
-// document.querySelector('.button').addEventListener('click', function(event) {
-//     event.preventDefault();
-//     if (firstName.value === "") {
-//         document.querySelector('.bg-modal').style.display = 'none';
-//     }   else {
-//         headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
-//     // console.log(firstName.value);
-//     // console.log(headerName.textContent);
-//     document.querySelector('.bg-modal').style.display = 'none';
-//     localStorage.setItem("firstName", firstName.value);
-//     }
-//     // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
-//     // console.log(firstName.value);
-//     // console.log(headerName.textContent);
-//     // document.querySelector('.bg-modal').style.display = 'none';
-//     // localStorage.setItem("firstName", firstName.value);
-// });
 
 // Code for Modal 1
 // Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
@@ -108,25 +75,9 @@ document.querySelector('.button').addEventListener('click', function(event) {
     document.querySelector('.bg-modal').style.display = 'none';
     localStorage.setItem("firstName", firstName.value);
     }
-    // headerName.textContent = "Plan Your Next Vacation, " + firstName.value + "!";
-    // console.log(firstName.value);
-    // console.log(headerName.textContent);
-    // document.querySelector('.bg-modal').style.display = 'none';
-    // localStorage.setItem("firstName", firstName.value);
 });
 
-// Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
-// document.querySelector('.close').addEventListener('click', function () {
-//     document.querySelector('.bg-modal').style.display = 'none';
-// });
-
-// Getting the first name to local storage.
-
-// localStorage.getItem('firstName');
-
 localStorage.getItem('firstName');
-
-// End code for Modal 1
 
 // Code for Modal 2
 // Takes the name entered by the user and appends it to the end of the header. The modal also closes when the user clicks 'submit'.
@@ -137,15 +88,12 @@ document.querySelector('.firstSubmit').addEventListener('click', function(event)
     event.preventDefault();
     document.querySelector('.bg-modal').style.display = 'none';
 });
-// End code for Modal 2
 
 // Code for Modal 3 - mountain theme
 mountainButton.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal2').style.display = 'none';
     document.querySelector(".bg-modal3").style.display = "flex";
-    
-    
 });
 
 // Code for Modal 4 - beach theme
@@ -153,71 +101,56 @@ beachButton.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal2').style.display = 'none';
     document.querySelector(".bg-modal4").style.display = "flex";
-    
 });
 
-//Code for Modal 5 - Malibu
+//Code to display Malibu weather and eateries
 selectedMalibu.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
     localStorage.setItem("destination", selectedMalibu.value);
-
     document.querySelector('.bg-modal').style.display = 'none';
-
-
 });
 
+//Code to display Florida keys weather and eateries
 selectedFlKeys.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
     localStorage.setItem("destination", selectedFlKeys.value);
 
     document.querySelector('.bg-modal').style.display = 'none';
-
 });
 
+//Code to display Hawaii weather and eateries
 selectedHawaii.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal4').style.display = 'none';
     localStorage.setItem("destination", selectedHawaii.value);
-
     document.querySelector('.bg-modal').style.display = 'none';
-
-    
 });
 
+//Code to display Breckenridge weather and eateries
 selectedBreckenridge.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
     localStorage.setItem("destination", selectedBreckenridge.value);
-
     document.querySelector('.bg-modal').style.display = 'none';
-
-  
 });
 
+//Code to display Banff weather and eateries
 selectedBanff.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
     localStorage.setItem("destination", selectedBanff.value);
-
-    document.querySelector('.bg-modal').style.display = 'none';
-
-    
+    document.querySelector('.bg-modal').style.display = 'none'; 
 });
 
+//Code to display Snowshoe weather and eateries
 selectedSnowshoe.addEventListener('click', function(){
     event.preventDefault();
     document.querySelector('.bg-modal3').style.display = 'none';
     localStorage.setItem("destination", selectedSnowshoe.value);
-
     document.querySelector('.bg-modal').style.display = 'none';
-
 });
-// Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
-// document.querySelector('.close2').addEventListener('click', function () {
-//     document.querySelector('.bg-modal2').style.display = 'none';
-// });
 
 // Storing the first name to local storage.
 localStorage.getItem('firstName');
@@ -225,13 +158,10 @@ localStorage.getItem('firstName');
     localStorage.setItem("firstName", firstName.value);
 });
 
-// Allows modal to be closed when the user clicks the 'x' in the top right corner of the modal.
-
 // Storing the first name to local storage.
 localStorage.getItem('firstName');
-// End Code for Modal 2
 
-
+// Malibu Weather Fetch
 function malibu(event) {
     event.preventDefault();
     fetch(weatherMalibu)
@@ -264,24 +194,18 @@ function malibu(event) {
             malibuNightTemp.style = "justify-content: center;"
             humidityMalibu.style = "justify-content: center;"
             windMalibu.style = "justify-content: center;"
-
             weatherCardMalibu.append(weatherForecastMalibu, malibuNightTemp, humidityMalibu, windMalibu);
-
-            
         }
-
     })
-    //start Damian's code
     getEatMalibu(eatMalibu);
-    //end Damian's code
 }
-//start Damian's code
+
+// Fetch Malibu Zomato
 function getEatMalibu (url){
     fetch(url, {headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
       }}) 
     .then( function(response){
         return response.json()
@@ -292,11 +216,10 @@ function getEatMalibu (url){
         eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
     });
 }
-// end Damian's code
 
-// console.log(selectedMalibu);
 selectedMalibu.addEventListener("click", malibu)
 
+// Fetch Florida Keys Weather
 function flKeys (event) {
     event.preventDefault();
 
@@ -336,18 +259,15 @@ function flKeys (event) {
         }
 
     })
-    //start Damian's code
     getEatFlKeys(eatFlKeys);
-    //end Damian's code
 }
 
-//start Damian's code
+// Fetch Florida Keys Eatery
 function getEatFlKeys (url){
     fetch(url, {headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
       }}) 
     .then( function(response){
         return response.json()
@@ -358,10 +278,10 @@ function getEatFlKeys (url){
         eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
     });
 }
-// end Damian's code
 
 selectedFlKeys.addEventListener("click", flKeys)
 
+// Fetch Hawaii Weather
 function hawaii (event) {
     event.preventDefault();
 
@@ -395,25 +315,18 @@ function hawaii (event) {
             var hawaiiWind = document.createElement("div");
             hawaiiWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
             hawaiiWind.style = "justify-content: center;"
-
             weatherCardHawaii.append(weatherForecastHawaii, hawaiiNight, hawaiiHumidity, hawaiiWind);
-
-    
         }
-
     })
-    //start Damian's code
     getEatHawaii(eatHawaii);
-    //end Damian's code
 }
 
-//start Damian's code
+// Fetch Hawaii Eatery
 function getEatHawaii (url){
    fetch(url, {headers: {
        'Accept': 'application/json',
        'Content-Type': 'application/json',
        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-       // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
      }}) 
    .then( function(response){
        return response.json()
@@ -424,12 +337,10 @@ function getEatHawaii (url){
        eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
    });
 }
-// end Damian's code
-
-
 
 selectedHawaii.addEventListener("click", hawaii)
 
+// Fetch Breckenridge Weather
 function breckenridge (event) {
     event.preventDefault();
 
@@ -463,24 +374,18 @@ function breckenridge (event) {
             var breckWind = document.createElement("div");
             breckWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
             breckWind.style = "justify-content: center;"
-
             weatherCardBreckenridge.append(weatherForecastBreckenridge, breckNight, breckHumidity, breckWind);
-
-  
         }
-
     })
-    //start Damian's code
     getEatBreckenridge(eatBreckenridge);
-    //end Damian's code
 }
-//start Damian's code
+
+// Fetch Breckenridge Eatery
 function getEatBreckenridge (url){
    fetch(url, {headers: {
        'Accept': 'application/json',
        'Content-Type': 'application/json',
        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-       // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
      }}) 
    .then( function(response){
        return response.json()
@@ -491,11 +396,10 @@ function getEatBreckenridge (url){
        eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
    });
 }
-// end Damian's code
-
 
 selectedBreckenridge.addEventListener("click", breckenridge)
 
+// Fetch Banff Weather
 function banff (event) {
     event.preventDefault();
 
@@ -531,23 +435,17 @@ function banff (event) {
             banffWind.style = "justify-content: center;"
 
             weatherCardBanff.append(weatherForecastBanff, banffNight, banffHumidity, banffWind);
-
-
         }
-
     })
-    //start Damian's code
     getEatBanff(eatBanff);
-    //end Damian's code
 }
 
-//start Damian's code
+// Fetch Banff Eatery
 function getEatBanff (url){
     fetch(url, {headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-        // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
       }}) 
     .then( function(response){
         return response.json()
@@ -558,11 +456,10 @@ function getEatBanff (url){
         eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
     });
 }
-// end Damian's code
-
 
 selectedBanff.addEventListener("click", banff)
 
+// Fetch Snowshoe Weather
 function snowshoe (event) {
     event.preventDefault();
 
@@ -596,28 +493,18 @@ function snowshoe (event) {
             var snowshoeWind = document.createElement("div");
             snowshoeWind.innerHTML = "Wind Speed: " + data.daily[i].wind_speed + "MPH";
             snowshoeWind.style = "justify-content: center;"
-
-
             weatherCardSnowshoe.append(weatherForecastSnowshoe, snowshoeNight, snowshoeHumidity, snowshoeWind);
-
-
-
         }
-
     })
-    //start Damian's code
     getEatSnowshoe(eatSnowshoe);
-    //end Damian's code
-
 }
 
-//start Damian's code
+// Fetch Snowshoe Eatery
 function getEatSnowshoe (url){
    fetch(url, {headers: {
        'Accept': 'application/json',
        'Content-Type': 'application/json',
        'user-key': "e520bba2bf7f434d5803aa5e81d5ad4a",
-       // 'Authorization': 'Bearer ' + "e520bba2bf7f434d5803aa5e81d5ad4a"
      }}) 
    .then( function(response){
        return response.json()
@@ -628,29 +515,5 @@ function getEatSnowshoe (url){
        eatAt3.textContent = data.best_rated_restaurant[2].restaurant.name
    });
 }
-// end Damian's code
+
 selectedSnowshoe.addEventListener("click", snowshoe);
-
-// Global Variables for Modal
-// var vacation = document.querySelector('.vacationSelection')
-// // Takes selections and saves them to local storage.
-// document.querySelector('.save').addEventListener('click', function(event){
-//     event.preventDefault();
-//     document.querySelector('.bg-modal2').style.display = 'flex';
-// });
-
-// document.querySelector('.saveButton').addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem("destination", vacation.value);
-//     console.log(vacation.value);
-//     document.querySelector('.bg-modal2').style.display = 'none';
-// });
-
-// localStorage.getItem("vacationSelected");
-
-// // Closes modal if 'x' is clicked.
-// document.querySelector('.close2').addEventListener('click', function() {
-//     document.querySelector('.bg-modal2').style.display = 'none';
-// });
-
-
