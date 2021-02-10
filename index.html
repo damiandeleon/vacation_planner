@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bulma and Our CSS stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
-    <!-- link stylesheets -->
     <title>Your Vacation Details</title>
 </head>
 
@@ -15,12 +15,8 @@
     <!--First Modal-->
     <div class="bg-modal">
         <div class="modal-content">
-            <!-- <div class="close">+</div> -->
-            <!-- <img src="" alt=""> -->
             <form action="">
-
-                <p id="greeting">Please enter your first name.</p>
-
+                <p id="greeting">Please enter your first name:</p>
                 <input class="firstName" type="text" placeholder="First Name">
                 <a href="" class="button firstSubmit">Submit</a>
             </form>
@@ -34,25 +30,21 @@
                 id="themes">
                 <!-- COLUMN 1-->
                 <div class="column">
-
                     <img src="https://www.jetsetter.com/wp-content/uploads/sites/7/2018/04/q3ybXLmx-1380x690.jpeg"
                         alt="cabin at foot of mountain">
                     <button class="button is-info is-light" id="mountains">Mountains</button>
-
                 </div>
 
                 <!-- COLUMN 2-->
                 <div class="column">
-
                     <img src="https://travel.home.sndimg.com/content/dam/images/travel/stock/2018/4/10/iStock-672425798.-beach_chairs.jpg.rend.hgtvcom.1280.853.suffix/1523383408931.jpeg"
                         alt="couple lounging near beachfront">
                     <button class="button is-info is-light" id="beach">Beach</button>
-
                 </div>
             </div>
         </div>
     </div>
-
+    <!--Third Modal-->
     <div class="bg-modal3">
         <div class="modal-content3">
             <p>Pick your mountain adventure:</p>
@@ -65,14 +57,12 @@
                         <button class="button is-info is-light travelbtn" id="breckenridge"
                             value="Breckenridge">Breckenridge</button>
                     </div>
-
                     <div class="column center">
                         <img src="https://www.nationalgeographic.com/content/dam/travel/2019-digital/banff-national-park/01-banff-national-park-canada.jpg"
                             alt="Banff National Park" class="winterimages">
                         <button class="button is-info is-light travelbtn" id="banff" value="Banff National Park">Banff
                             National Park</button>
                     </div>
-
                     <div class="column center">
                         <img src="https://www.rd.com/wp-content/uploads/2017/11/This-Stunning-Town-in-the-Swiss-Alps-Will-Pay-You-25000-to-Move-There_252539665_ansharphoto-ft.jpg"
                             alt="Swiss Alps" class="winterimages">
@@ -82,6 +72,7 @@
             </div>
         </div>
     </div>
+    <!--Fourth Modal-->
     <div class="bg-modal4">
         <div class="modal-content4">
             <p>Pick your beach adventure:</p>
@@ -169,7 +160,6 @@
 
     </div>
     <!-- Travel API -->
-    <!-- <div id="eats"> -->
     <div class="tile is-ancestor is-clearfix" id="eats">
         <div class="tile is-vertical is-8">
             <div class="tile">
@@ -190,34 +180,7 @@
         </div>
     </div>
 
-    <!-- </div> -->
-    <!--Save to Local Storage Modal-->
-
-    <!-- <button class="button save">Save!</button> -->
-    <!-- <div class="bg-modal2">
-        <div class="modal-content2">
-            <div class="close2">+</div>
-            <img src="" alt="">
-            <form class="form2" action="">
-                <p>Enter the destination name and click submit to save to your local storage.</p>
-                <input class="vacationSelection" type="text" placeholder="Destination">
-                <a href="" class="button saveButton">Submit</a>
-            </form>
-        </div>
-    </div> -->
-
-
-    <div class="bg-modal2">
-        <div class="modal-content2">
-
-        </div>
-    </div>
-
-
     <script src="./assets/script.js"></script>
 </body>
-
-
-</html>
 
 </html>
